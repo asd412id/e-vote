@@ -1,0 +1,78 @@
+// compileCompressed: ../../public/css/styles.min.css
+$red: #dc3545;
+$grey: #333333;
+.pagination{
+  .page-item{
+    .page-link{
+      color: $red;
+      padding: 0.3rem 0.7rem;
+    }
+    &.active{
+      .page-link{
+        background-color: $red;
+        border-color: $red;
+        color: #ffffff;
+      }
+    }
+  }
+}
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+    background-color: $red;
+    border-color: $red;
+}
+.custom-control-input:checked~.custom-control-label::before {
+    color: #fff;
+    background-color: $red;
+    border-color: $red;
+}
+#header{
+  .navbar{
+    box-shadow: 0px 1px 7px lighten(black,35%);
+  }
+}
+#sidebar{
+  position: fixed;
+  height: 100%;
+  width: 225px;
+  background-color: $grey;
+  .nav-pills{
+    li{
+      .nav-link{
+        color: #ffffff;
+        border-radius: 0;
+        &.active{
+          color: white;
+          background-color: $red;
+        }
+        &.disabled{
+          color: lighten($red, 35%);
+        }
+        &:hover:not(.active),&:active:not(.active),&:focus:not(.active){
+          background-color: lighten($red, 25%);
+        }
+      }
+    }
+  }
+}
+#admin-content{
+  margin-left: 225px;
+  margin-top: 56px;
+}
+#voting{
+  .photo{
+    width: 100%;
+    height: 250px;
+    object-fit: contain;
+    object-position: center;
+  }
+  .candidate{
+    cursor: pointer;
+    &:hover{
+      background-color: darken(white, 15%);
+    }
+    &.selected{
+      background-color: $red;
+      color: white;
+    }
+  }
+}
