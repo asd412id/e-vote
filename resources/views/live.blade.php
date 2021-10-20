@@ -1,10 +1,8 @@
-@extends('admin')
-@section('admin_content')
-<div class="card bg-danger text-light">
+@extends('layout')
+@section('content')
+<div class="card bg-danger text-center text-light rounded-0 border-0">
   <div class="card-header">
     <span class="h5">{{ $title }}</span>
-    <a href="{{ route('admin.subject.index') }}" class="btn btn-sm btn-light text-danger float-right"><i
-        class="fa fa-arrow-left"></i> Kembali</a>
   </div>
   <div class="card-body bg-white text-dark">
     <h2 class="text-center mb-3">Jumlah Suara yang Masuk: {{ $subject->progress() }}%</h2>
