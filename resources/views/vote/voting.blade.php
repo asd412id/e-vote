@@ -18,7 +18,7 @@
       <div class="card candidate" id="{{ $c->uuid }}">
         <div class="card-body text-center" style="min-height: 300px">
           <img src="{{ \Storage::disk('public')->url(@$c->opt['photo']) }}" alt=""
-            class="photo img-fluid img-thumbnail h-100 w-auto">
+            class="photo img-fluid img-thumbnail h-100 w-100" style="object-fit: cover">
         </div>
         <div class="card-footer text-center font-weight-bold h6">
           {{ ($key+1).'. '.$c->name }}

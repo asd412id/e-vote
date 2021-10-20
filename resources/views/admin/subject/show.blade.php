@@ -14,9 +14,9 @@
       <div class="card">
         <div class="card-body text-center h4" style="height: 270px">
           <img src="{{ \Storage::disk('public')->url(@$c->opt['photo']) }}" alt=""
-            class="photo img-thumbnail img-fluid h-100 w-auto">
+            class="photo img-thumbnail img-fluid h-100 w-100" style="object-fit: cover">
         </div>
-        <div class="card-footer text-center h5">
+        <div class="card-footer text-center h6">
           <em class="d-block mx-auto border mb-1 p-1">{{ $subject->candidateProgress($c->id) }}%</em>
           <span class="d-block">{{ ($key+1).'. '.$c->name }}</span>
         </div>

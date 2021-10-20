@@ -75,7 +75,7 @@ class VoteController extends Controller
       return redirect()->route('login')->withErrors('Voting tidak ditemukan!');
     }
     $data = [
-      'title' => 'Live Hasil Voting ' . $subject->name,
+      'title' => "<span class='badge badge-warning'>Live Hasil Voting</span>\n" . $subject->name,
       'subject' => $subject,
     ];
 

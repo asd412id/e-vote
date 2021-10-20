@@ -18,7 +18,7 @@ class SubjectController extends Controller
   {
     $query = auth()->user()->subjects()
       ->orderBy('status', 'desc')
-      ->orderBy('start', 'asc')
+      ->orderBy('start', 'desc')
       ->paginate(20)
       ->appends($_GET);
     $data = [
