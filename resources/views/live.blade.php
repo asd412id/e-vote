@@ -10,9 +10,9 @@
     @foreach ($subject->candidates as $key => $c)
     <div class="col-md-{{12/count($subject->candidates)}} col-12 mb-3 float-left">
       <div class="card">
-        <div class="card-body text-center h4" style="min-height: 300px">
+        <div class="card-body text-center h4">
           <img src="{{ \Storage::disk('public')->url(@$c->opt['photo']) }}" alt=""
-            class="photo img-thumbnail img-fluid h-100 w-100" style="object-fit: cover">
+            class="photo img-thumbnail img-fluid w-100" style="height: 325px;object-fit: cover;object-position: top">
         </div>
         <div class="card-footer text-center h5">
           <em class="d-block mx-auto border mb-1 p-1">{{ $subject->candidateProgress($c->id) }}%</em>

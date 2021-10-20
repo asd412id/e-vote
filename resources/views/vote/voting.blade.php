@@ -16,9 +16,9 @@
     @foreach ($subject->candidates as $key => $c)
     <div class="col-md-{{12/count($subject->candidates)}} col-12 mb-3 float-left">
       <div class="card candidate" id="{{ $c->uuid }}">
-        <div class="card-body text-center" style="min-height: 300px">
-          <img src="{{ \Storage::disk('public')->url(@$c->opt['photo']) }}" alt=""
-            class="photo img-fluid img-thumbnail h-100 w-100" style="object-fit: cover">
+        <div class="card-body text-center">
+          <img src="{{ \Storage::disk('public')->url(@$c->opt['photo']) }}" alt="" class="photo img-fluid img-thumbnail"
+            style="object-fit: cover;object-position: top">
         </div>
         <div class="card-footer text-center font-weight-bold h6">
           {{ ($key+1).'. '.$c->name }}
